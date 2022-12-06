@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  proxy:
+    image: privacyandpolicy
+    build:
+      context: .
+    ports:
+      - "30000:80"
+    networks:
+      - privacyandpolicy
+
+networks: 
+  privacyandpolicy:
+    driver: bridge
